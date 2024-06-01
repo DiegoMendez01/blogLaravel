@@ -1,19 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return "Welcome to the Page";
-});
+Route::get('/', HomeController::class);
 
-Route::get('/posts', function(){
-    return "Welcome to the Posts";
-});
-
-Route::get('/posts/create', function(){
-    return "Welcome to the Create Post";
-});
-
-Route::get('/posts/{post}', function($post){
-    return "Welcome to the Post {$post}";
-});
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/create', [PostController::class, 'create']);
+Route::get('/posts/{post}', [PostController::class, 'show']);
