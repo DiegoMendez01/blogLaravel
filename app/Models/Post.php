@@ -12,6 +12,19 @@ class Post extends Model
 
     // protected $table = 'posts';
 
+    // Indicar valores aceptables para asignacion masiva
+    protected $fillable = [
+        'title',
+        'slug',
+        'content',
+        'category'
+    ];
+
+    // Ignorar valor en asignacion masiva
+    protected $guarded = [
+        'is_active'
+    ];
+
     protected function casts(): array
     {
         return [
