@@ -1,8 +1,8 @@
 <x-app-layout>
+    <h1>Bienvenido a la pagina de Posts</h1>
     <a href="posts/create">
         Nuevo Post
     </a>
-    <h1>Bienvenido a la pagina de Posts</h1>
     <ul>
         @foreach ($posts as $post)
             <li>
@@ -12,4 +12,6 @@
             </li>
         @endforeach
     </ul>
+
+    {{ $posts->links() }}
 </x-app-layout>
