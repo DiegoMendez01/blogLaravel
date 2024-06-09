@@ -1,6 +1,6 @@
 <x-app-layout>
     <h1>Formulario Crear Post</h1>
-    <form action="../posts" method="post">
+    <form action="{{ route('posts.store') }}" method="post">
         @csrf
         <div>
             <label>Titulo:</label>

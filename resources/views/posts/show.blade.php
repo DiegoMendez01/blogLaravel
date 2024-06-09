@@ -7,7 +7,7 @@
     <title>Posts Show | {{ $post }}</title>
 </head>
 <body>
-    <a href="../posts">
+    <a href="{{ route('posts.index') }}">
         Volver
     </a>
     <h1>Titulo: {{ $post->title }}</h1>
@@ -17,11 +17,11 @@
     <p>
         {{ $post->content }}
     </p>
-    <a href="../posts/{{ $post->id }}/edit">
+    <a href="{{ route('posts.edit', $post) }}">
         Editar Post
     </a>
 
-    <form action="../posts/{{ $post->id }}" method="post">
+    <form action="{{ route('posts.delete', $post) }}" method="post">
         @csrf
         @method('DELETE')
         <button type="submit">
