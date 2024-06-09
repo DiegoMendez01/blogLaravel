@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Posts</title>
-</head>
-<body>
+<x-app-layout>
+    <a href="posts/create">
+        Nuevo Post
+    </a>
     <h1>Bienvenido a la pagina de Posts</h1>
-</body>
-</html>
+    <ul>
+        @foreach ($posts as $post)
+            <li>
+                <a href="posts/{{$post->id}}">
+                    {{ $post['title'] }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+</x-app-layout>
