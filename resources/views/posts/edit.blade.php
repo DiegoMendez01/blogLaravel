@@ -8,6 +8,10 @@
             <input type="text" name="title" value="{{ $post->title }}" />
         </div>
         <div>
+            <label>Slug:</label>
+            <input type="text" name="slug" value="{{ $post->slug }}" />
+        </div>
+        <div>
             <label>Contenido:</label>
             <textarea name="content">{{ $post->content }}</textarea>
         </div>

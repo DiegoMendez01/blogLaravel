@@ -7,6 +7,10 @@
             <input type="text" name="title" />
         </div>
         <div>
+            <label>Slug:</label>
+            <input type="text" name="slug" />
+        </div>
+        <div>
             <label>Contenido:</label>
             <textarea name="content"></textarea>
         </div>
