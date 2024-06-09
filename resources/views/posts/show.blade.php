@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Posts Show | {{ $post }}</title>
-</head>
-<body>
+<x-app-layout>
     <a href="{{ route('posts.index') }}">
         Volver
     </a>
@@ -21,12 +13,11 @@
         Editar Post
     </a>
 
-    <form action="{{ route('posts.delete', $post) }}" method="post">
+    <form action="{{ route('posts.destroy', $post) }}" method="post">
         @csrf
         @method('DELETE')
         <button type="submit">
             Eliminar Post
         </button>
     </form>
-</body>
-</html>
+</x-app-layout>
